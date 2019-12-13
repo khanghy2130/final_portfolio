@@ -1,0 +1,40 @@
+:root {
+	--dark-color: #1a1a1a;
+	--light-color: #ededed;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--dark-color);
+	font-family: 'Concert One', cursive;
+}
+
+
+#welcome-section {
+	height: 90vh;
+	font-size: 8vw;
+}
+#welcome-text-1, #welcome-text-2, #welcome-text-3 {
+	margin: 0;
+}
+/* welcome texts sizing for non-mobile */
+#welcome-text-1 {
+	font-size: 1.2em; 
+}
+#welcome-text-2 {
+	font-size: 0.6em;
+}
+#welcome-text-3 {
+	font-size: 1.0em;
+}
+/* getting into mobile aspect ratio */
+@media only screen and (max-aspect-ratio: 1/1){
+	#welcome-section {
+		font-size: 17vw;
+	}
+}
