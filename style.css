@@ -1,30 +1,55 @@
 :root {
-	--dark-color: #1a1a1a;
-	--light-color: #ededed;
+	--primary-color: #222;
+	--secondary-color: #333;
+	--tertiary-color: #cf6eff;
+	background: var(--primary-color);
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
-
-body {
-	background-color: var(--dark-color);
 	font-family: 'Concert One', cursive;
 }
 
-
-#welcome-section {
-	height: 90vh;
+body {
+	overflow-x: hidden;
 	font-size: 8vw;
 }
+/* change font size as the ratio is getting portrait */
+@media only screen and (max-aspect-ratio: 6/5){
+	body {
+		font-size: 17vw;
+	}
+}
+
+
+/* my custom color classes */
+.bg-my-primary {
+	background: var(--primary-color);
+}
+.bg-my-secondary {
+	background: var(--secondary-color);
+}
+.text-my-tertiary {
+	color: var(--tertiary-color);
+}
+
+
+/* WELCOME SECTION */
+#welcome-section {
+	height: 90vh;
+}
+
 #welcome-text-1, #welcome-text-2, #welcome-text-3 {
 	margin: 0;
 }
-/* welcome texts sizing for non-mobile */
+/* welcome texts sizing */
 #welcome-text-1 {
-	font-size: 1.2em; 
+	font-size: 1.2em;
+	
+	opacity: 0;
+	animation: animation1 0.8s 1s ease-out forwards;
 }
 #welcome-text-2 {
 	font-size: 0.6em;
@@ -32,9 +57,59 @@ body {
 #welcome-text-3 {
 	font-size: 1.0em;
 }
-/* getting into mobile aspect ratio */
-@media only screen and (max-aspect-ratio: 1/1){
-	#welcome-section {
-		font-size: 17vw;
+
+#welcome-div-bottom {
+	max-height: 0;
+	overflow: hidden;
+	animation: animation2 1s 3s ease-out forwards;
+}
+
+/* animation for HELLO text */
+@keyframes animation1 {
+	0% {
+		opacity: 0;
+		transform: translate(0, -20vh);
 	}
+	100% {
+		opacity: 1;
+	}
+}
+/* animation for WELCOME text */
+@keyframes animation2 {
+	0% {
+		max-height: 0;
+	}
+	100% {
+		max-height: 40vh;
+	}
+}
+
+/* SLASH IMAGE (between welcome & projects sections) */
+#slash-img {
+	height: 20vh;
+	background: linear-gradient(to bottom right, var(--primary-color) 50%, var(--secondary-color) 50%);
+}
+
+/* PROJECTS SECTION */
+#projects-section {
+	height: 100px; /* tem */
+	
+}
+
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--primary-color); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color); 
+}
+
+/* highlighting color */
+::selection {
+	color: #eee;
+	background: #111;
 }

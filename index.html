@@ -8,10 +8,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="text-light">
+<!-- body is hidden until the page is loaded -->
+<body class="text-light bg-my-secondary" hidden>
 
 	<!-- Welcome section -->
-	<section id="welcome-section" class="container-fluid d-flex flex-column justify-content-center text-center bg-danger">
+	<section id="welcome-section" class="container-fluid d-flex flex-column justify-content-center text-center bg-my-primary text-my-tertiary">
 		<h1 id="welcome-text-1">Hello</h1>
 		<div id="welcome-div-bottom">
 			<h1 id="welcome-text-2">&</h1>
@@ -19,6 +20,16 @@
 		</div>
 	</section>
 
+	<!-- Slashing background between welcome & projects sections -->
+	<div id="slash-img"></div>
 
+	<!-- Projects section -->
+	<section id="projects-section" class="container-fluid bg-my-secondary" >
+		
+	</section>
+
+
+	<script src="data.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
