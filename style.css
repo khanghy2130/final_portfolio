@@ -1,6 +1,6 @@
 :root {
 	--primary-color: #222;
-	--secondary-color: #333;
+	--secondary-color: #2d2d2d;
 	--tertiary-color: #cf6eff;
 	background: var(--primary-color);
 }
@@ -61,7 +61,7 @@ body {
 #welcome-div-bottom {
 	max-height: 0;
 	overflow: hidden;
-	animation: animation2 1s 3s ease-out forwards;
+	animation: animation2 1s 2.5s ease-out forwards;
 }
 
 /* animation for HELLO text */
@@ -84,16 +84,31 @@ body {
 	}
 }
 
-/* SLASH IMAGE (between welcome & projects sections) */
-#slash-img {
-	height: 20vh;
-	background: linear-gradient(to bottom right, var(--primary-color) 50%, var(--secondary-color) 50%);
-}
-
 /* PROJECTS SECTION */
 #projects-section {
-	height: 100px; /* tem */
+	height: 1000px; /* tem */
 	
+}
+
+
+/* HEADINGS */
+.my-heading {
+	color: var(--tertiary-color);
+	font-size: 0.55em;
+	transition: 1s;
+
+	opacity: 0;
+	transform: translateY(10vh);
+}
+.my-heading-animated {
+	opacity: 1;
+	transform: translateY(0vh);
+}
+
+/* SLASH IMAGES */
+.slash-img {
+	background: linear-gradient(to bottom right, var(--primary-color) 50%, var(--secondary-color) 50%);
+	height: 20vh;
 }
 
 
@@ -110,6 +125,20 @@ body {
 
 /* highlighting color */
 ::selection {
-	color: #eee;
+	color: yellow;
 	background: #111;
+}
+
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  color: #555;
+}
+.icon:hover {
+	color: var(--tertiary-color);
 }
