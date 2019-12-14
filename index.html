@@ -13,6 +13,9 @@
 
 	<!-- Welcome section -->
 	<section id="welcome-section" class="container-fluid d-flex flex-column justify-content-center text-center bg-my-primary text-my-tertiary">
+		<button id="theme-switcher">
+			<svg class="icon icon-bulb"><use xlink:href="#icon-bulb"></use></svg>
+		</button>
 		<h1 id="welcome-text-1">Hello</h1>
 		<div id="welcome-div-bottom">
 			<h1 id="welcome-text-2">&</h1>
@@ -21,38 +24,59 @@
 	</section>
 
 	<!-- Slashing background between welcome & projects sections -->
-	<div class="slash-img mb-5"></div>
+	<div class="slash-img"></div>
 
 	<!-- Projects section -->
 	<section id="projects-section" class="container-fluid bg-my-secondary" >
-		<h1 class="my-heading text-center">What I've been working on</h1>
+		<h1 class="my-heading text-center pt-3">What I've been working on</h1>
 	</section>
 
+	<!-- Slashing background between projects & about sections -->
+	<div class="slash-img"></div>
 
 	<!-- About section -->
 	<section id="about-section" class="container-fluid bg-my-secondary" >
-		<h1 class="my-heading text-center">Who is Hy Nguyen?</h1>
+		<h1 class="my-heading text-center pt-3">Who is Hy Nguyen?</h1>
+		<p id="about-paragraph" class="py-2 px-2 px-md-5">That's me! I'm a web developer located in Dallas-Fort Worth area of Texas. Problem solving has always been my biggest interest. I'm excited for opportunities to bring ideas to life with great people, as well as to master the tools that make it possible.</p>
+
+		<form id="contact-form" class="text-center">
+			<div id="inputs-container">
+				
+			</div>
+			<button id="contact-btn" class="btn btn-custom">Let's talk</button>
+		</form>
+		
+
+
+		<div>
+			<svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
+			<svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
+		</div>
+		
+		
 	</section>
 
 
-	<!-- ///////// -->
-	<svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
-	<svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
+	
 
 	
 
 	<!-- SVG symbols from icomoon.io -->
-	<svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<svg hidden aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<defs>
 			<symbol id="icon-github" viewBox="0 0 32 32">
-			<title>github</title>
-			<path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
-			</symbol>
+				<title>github</title>
+				<path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
+				</symbol>
 			<symbol id="icon-linkedin" viewBox="0 0 32 32">
-			<title>linkedin</title>
-			<path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"></path>
-			<path d="M2 12h6v18h-6v-18z"></path>
-			<path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+				<title>linkedin</title>
+				<path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"></path>
+				<path d="M2 12h6v18h-6v-18z"></path>
+				<path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+			</symbol>
+			<symbol id="icon-bulb" viewBox="0 0 32 32">
+				<title>bulb</title>
+				<path d="M16 0c-6.076 0-11 4.924-11 11 0 4.031 3.688 8.303 5.031 12.055 2.003 5.595 1.781 8.945 5.969 8.945 4.25 0 3.965-3.334 5.969-8.922 1.347-3.76 5.031-8.078 5.031-12.078 0-6.076-4.926-11-11-11zM18.592 27.176l-4.958 0.619c-0.177-0.512-0.367-1.111-0.598-1.893-0.003-0.010-0.007-0.021-0.009-0.031l6.188-0.773c-0.088 0.295-0.182 0.605-0.264 0.883-0.131 0.449-0.248 0.839-0.359 1.195zM12.736 24.908c-0.182-0.602-0.387-1.236-0.615-1.908h7.766c-0.123 0.359-0.246 0.719-0.352 1.059l-6.799 0.849zM16 30c-1.013 0-1.479-0.117-1.997-1.25l4.238-0.531c-0.614 1.654-1.061 1.781-2.241 1.781zM20.672 21h-9.333c-0.498-1.080-1.096-2.16-1.686-3.217-1.305-2.335-2.653-4.75-2.653-6.783 0-4.963 4.037-9 9-9s9 4.037 9 9c0 2.018-1.35 4.446-2.656 6.795-0.584 1.053-1.178 2.131-1.672 3.205zM16 5c0.275 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5c-2.757 0-5 2.243-5 5 0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5c0-3.309 2.691-6 6-6z"></path>
 			</symbol>
 		</defs>
 	</svg>

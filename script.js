@@ -2,15 +2,23 @@
 window.onload = function(){
 	document.body.hidden = false; // show body after page loaded
 
-	let headings = document.querySelectorAll(".my-heading"); // the only 2 headings
+	let darkTheme = true;
+	let rootStyle = document.documentElement.style;
+	let themeSwitcher = document.getElementById("theme-switcher");
 
-	let animateCheckers = [
-		//  project panels, about paragraph, submit button, contact links
-	];
+	let headings = document.querySelectorAll(".my-heading"); // the only 2 headings
+	let animateCheckers = [];
+
+	let contactForm = document.getElementById("contact-form");
+	
+
+
 	// add headings onto the list
 	headings.forEach(heading => {
 		animateCheckers.push(animateChecker(heading, "my-heading-animated"));
 	});
+	// adding project panels
+
 
 	// run all animate checkers
 	window.onscroll = function(){
@@ -27,11 +35,32 @@ window.onload = function(){
 			}
 		};
 	}
-
 	function isNotBelowViewport(ele) {
 	    return ele.getBoundingClientRect().bottom <= (window.innerHeight || document.documentElement.clientHeight);
 	}
+
+	// theme switcher function
+	themeSwitcher.addEventListener("click", ()=>{
+		if (darkTheme){
+			darkTheme = false;
+			rootStyle.setProperty("--primary-color", "#cdcdcd");
+			rootStyle.setProperty("--secondary-color", "#f2f2f2");
+			rootStyle.setProperty("--tertiary-color", "#ff471a");
+			rootStyle.setProperty("--quaternary-color", "#444");
+		}
+		else {
+			darkTheme = true;
+			rootStyle.setProperty("--primary-color", "#222");
+			rootStyle.setProperty("--secondary-color", "#2d2d2d");
+			rootStyle.setProperty("--tertiary-color", "#cf6eff");
+			rootStyle.setProperty("--quaternary-color", "#eee");
+		}
+	});
 }
 
+/*
 
+icon web
+
+*/
 

@@ -2,8 +2,16 @@
 	--primary-color: #222;
 	--secondary-color: #2d2d2d;
 	--tertiary-color: #cf6eff;
+	--quaternary-color: #eee;
 	background: var(--primary-color);
 }
+/* 
+	Light theme
+--primary-color: #cdcdcd;
+--secondary-color: #f2f2f2;
+--tertiary-color: #ff471a;
+--quaternary-color: #444;
+*/
 
 * {
 	margin: 0;
@@ -14,15 +22,8 @@
 
 body {
 	overflow-x: hidden;
-	font-size: 8vw;
+	font-size: 8vw; /* default font size */
 }
-/* change font size as the ratio is getting portrait */
-@media only screen and (max-aspect-ratio: 6/5){
-	body {
-		font-size: 17vw;
-	}
-}
-
 
 /* my custom color classes */
 .bg-my-primary {
@@ -34,11 +35,39 @@ body {
 .text-my-tertiary {
 	color: var(--tertiary-color);
 }
-
+.btn-custom {
+	transition-duration: 0.3s;
+	border: var(--primary-color) solid 0.2em;
+	color: var(--primary-color);
+	background: var(--tertiary-color);
+}
+.btn-custom:hover {
+	border-color: var(--tertiary-color);
+	color: var(--tertiary-color);
+	background: var(--primary-color);
+}
 
 /* WELCOME SECTION */
 #welcome-section {
-	height: 90vh;
+	height: 110vh;
+	transition-duration: 0.5s; /* theme switching duration */
+}
+
+#theme-switcher {
+	background: transparent;
+	border: none;
+	outline: none;
+	transition-duration: 0.5s;
+	color: var(--quaternary-color);
+	font-size: 0.5em;
+
+	padding: 0;
+	position: absolute;
+	top: 1vh;
+	left: 2vw;
+}
+#theme-switcher:hover {
+	color: var(--tertiary-color);
 }
 
 #welcome-text-1, #welcome-text-2, #welcome-text-3 {
@@ -59,6 +88,7 @@ body {
 }
 
 #welcome-div-bottom {
+	margin-bottom: 15vh;
 	max-height: 0;
 	overflow: hidden;
 	animation: animation2 1s 2.5s ease-out forwards;
@@ -86,16 +116,32 @@ body {
 
 /* PROJECTS SECTION */
 #projects-section {
-	height: 1000px; /* tem */
+	height: 500px; /* tem */
 	
 }
 
+/* ABOUT SECTION */
+#about-section {
+	background: var(--primary-color);
+}
+
+#about-paragraph {
+	text-align: justify;
+	color: var(--quaternary-color);
+	font-size: 0.3em;
+	font-weight: normal;
+}
+
+#contact-btn {
+	font-size: 0.5em;
+}
 
 /* HEADINGS */
 .my-heading {
 	color: var(--tertiary-color);
 	font-size: 0.55em;
-	transition: 1s;
+	transition-duration: 1s;
+	transition-property: color, opacity, transform;
 
 	opacity: 0;
 	transform: translateY(10vh);
@@ -109,18 +155,22 @@ body {
 .slash-img {
 	background: linear-gradient(to bottom right, var(--primary-color) 50%, var(--secondary-color) 50%);
 	height: 20vh;
+	border: none;
+}
+.slash-img:nth-of-type(2n) {
+	background: linear-gradient(to bottom right, var(--secondary-color) 50%, var(--primary-color) 50%);
 }
 
 
 /* scroll bar */
 ::-webkit-scrollbar {
-  width: 10px;
+	width: 1vw;
 }
 ::-webkit-scrollbar-track {
-  background: var(--primary-color); 
+	background: var(--primary-color); 
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--tertiary-color); 
+	background: var(--tertiary-color); 
 }
 
 /* highlighting color */
@@ -137,8 +187,13 @@ body {
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
-  color: #555;
 }
-.icon:hover {
-	color: var(--tertiary-color);
+
+
+
+/* alternative values as the ratio is getting portrait */
+@media only screen and (max-aspect-ratio: 6/5){
+	body {
+		font-size: 17vw;
+	}
 }
