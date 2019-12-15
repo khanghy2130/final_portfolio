@@ -5,13 +5,7 @@
 	--quaternary-color: #eee;
 	background: var(--primary-color);
 }
-/* 
-	Light theme
---primary-color: #cdcdcd;
---secondary-color: #f2f2f2;
---tertiary-color: #ff471a;
---quaternary-color: #444;
-*/
+
 
 * {
 	margin: 0;
@@ -57,7 +51,7 @@ body {
 	background: transparent;
 	border: none;
 	outline: none;
-	transition-duration: 0.5s;
+	transition-duration: 0.3s;
 	color: var(--quaternary-color);
 	font-size: 0.5em;
 
@@ -116,7 +110,7 @@ body {
 
 /* PROJECTS SECTION */
 #projects-section {
-	height: 500px; /* tem */
+	height: 80vh; /* tem */
 	
 }
 
@@ -132,9 +126,57 @@ body {
 	font-weight: normal;
 }
 
-#contact-btn {
+/* THE FORM */
+#contact-form > button {
+	transition: 0.3s;
 	font-size: 0.5em;
 }
+#inputs-container {
+	overflow: hidden;
+	max-height: 50vh;
+	transition: max-height 0.6s linear;
+}
+.hidden-inputs-container {
+	max-height: 0 !important;
+}
+
+#email-input, #message-input {
+	padding: 0.2em;
+	margin-top: 1em;
+	font-size: 0.35em;
+	width: 100%;
+	display: block;
+	outline: none;
+
+	background: var(--secondary-color);
+	color: var(--tertiary-color);
+	border: none;
+}
+
+#email-input-underline, #message-input-underline {
+	transition: width 0.4s ease-out;
+	width: 0%;
+	height: 0.1em;
+	background: var(--tertiary-color);
+}
+.focus-underline {
+	width: 100% !important;
+}
+
+#links-footer > a {
+	display: inline-block;
+	background: transparent;
+	border: none;
+	outline: none;
+	transition: color 0.3s;
+	color: var(--quaternary-color);
+	font-size: 0.6em;
+}
+#links-footer > a:hover {
+	color: var(--tertiary-color);
+}
+
+
 
 /* HEADINGS */
 .my-heading {
@@ -179,7 +221,6 @@ body {
 	background: #111;
 }
 
-
 .icon {
   display: inline-block;
   width: 1em;
@@ -188,7 +229,6 @@ body {
   stroke: currentColor;
   fill: currentColor;
 }
-
 
 
 /* alternative values as the ratio is getting portrait */

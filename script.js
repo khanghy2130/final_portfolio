@@ -2,28 +2,31 @@
 window.onload = function(){
 	document.body.hidden = false; // show body after page loaded
 
-	let darkTheme = true;
-	let rootStyle = document.documentElement.style;
-	let themeSwitcher = document.getElementById("theme-switcher");
+	let usingDarkTheme = true,
+		rootStyle = document.documentElement.style,
+		themeSwitcher = document.getElementById("theme-switcher"),
 
-	let headings = document.querySelectorAll(".my-heading"); // the only 2 headings
-	let animateCheckers = [];
+		headings = document.querySelectorAll(".my-heading"), // the only 2 headings
+		animateCheckers = [],
 
-	let contactForm = document.getElementById("contact-form");
-	
+		contactForm = document.getElementById("contact-form"),
+		contactFormExpanded = false, // click to expand then click to submit
 
+		inputsContainer = document.getElementById("inputs-container"),
+		emailInput = document.getElementById("email-input"),
+		messageInput = document.getElementById("message-input"),
+		emailInputUnderline = document.getElementById("email-input-underline"),
+		messageInputUnderline = document.getElementById("message-input-underline");
 
-	// add headings onto the list
+	// add headings animate checkers
 	headings.forEach(heading => {
 		animateCheckers.push(animateChecker(heading, "my-heading-animated"));
 	});
-	// adding project panels
+	// adding project panels animate checkers
 
 
 	// run all animate checkers
-	window.onscroll = function(){
-		animateCheckers.forEach(f => f());
-	}
+	window.onscroll = function(){animateCheckers.forEach(f => f());};
 
 	function animateChecker(ele, className){
 		let animated = false; // closure
@@ -41,20 +44,52 @@ window.onload = function(){
 
 	// theme switcher function
 	themeSwitcher.addEventListener("click", ()=>{
-		if (darkTheme){
-			darkTheme = false;
-			rootStyle.setProperty("--primary-color", "#cdcdcd");
-			rootStyle.setProperty("--secondary-color", "#f2f2f2");
-			rootStyle.setProperty("--tertiary-color", "#ff471a");
-			rootStyle.setProperty("--quaternary-color", "#444");
+		let theme;
+		if (usingDarkTheme){
+			theme = colorThemes.lightTheme;
+		} else {
+			theme = colorThemes.darkTheme;
 		}
+
+		usingDarkTheme = !usingDarkTheme;
+		for (let key in theme){
+			rootStyle.setProperty(key, theme[key]);
+		}
+	});
+
+	// Submit Form button
+	contactForm.addEventListener("submit", e => {
+		// show the form (one time action)
+		if (!contactFormExpanded){
+			e.preventDefault();
+			contactFormExpanded = true;
+
+			inputsContainer.classList.remove("hidden-inputs-container");
+			emailInput.disabled = false;
+			messageInput.disabled = false;
+			emailInput.focus();	
+		}
+
+		// submitting/////////////
 		else {
-			darkTheme = true;
-			rootStyle.setProperty("--primary-color", "#222");
-			rootStyle.setProperty("--secondary-color", "#2d2d2d");
-			rootStyle.setProperty("--tertiary-color", "#cf6eff");
-			rootStyle.setProperty("--quaternary-color", "#eee");
+			e.preventDefault();
+			console.log("submitted");
 		}
+		
+	});
+
+	// Underlines fill on focus
+	emailInput.addEventListener("focus", e => {
+		emailInputUnderline.classList.add("focus-underline");
+	});
+	emailInput.addEventListener("blur", e => {
+		emailInputUnderline.classList.remove("focus-underline");
+	});
+	messageInput.addEventListener("focus", e => {
+		messageInputUnderline.classList.add("focus-underline");
+	});
+	messageInput.addEventListener("blur", e => {
+		messageInputUnderline.classList.remove("focus-underline");
 	});
 }
 
@@ -62,5 +97,6 @@ window.onload = function(){
 
 icon web
 
+make your own mailer!!!
 */
 
