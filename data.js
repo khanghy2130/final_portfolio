@@ -12,7 +12,7 @@ var colorThemes = {
 		"--quaternary-color" : "#eee"
 	},
 	lightTheme : {
-		"--primary-color" : "#dadada",
+		"--primary-color" : "#cfcfcf",
 		"--secondary-color" : "#eaeaea",
 		"--tertiary-color" : "#ff471a",
 		"--quaternary-color" : "#444"

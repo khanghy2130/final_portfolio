@@ -176,6 +176,10 @@ body {
 	color: var(--tertiary-color);
 }
 
+#copyright-text {
+	color: var(--quaternary-color);
+	font-size: 0.2em;
+}
 
 
 /* HEADINGS */

@@ -62,12 +62,7 @@ window.onload = function(){
 		// show the form (one time action)
 		if (!contactFormExpanded){
 			e.preventDefault();
-			contactFormExpanded = true;
-
-			inputsContainer.classList.remove("hidden-inputs-container");
-			emailInput.disabled = false;
-			messageInput.disabled = false;
-			emailInput.focus();	
+			expandMessageForm();
 		}
 
 		// submitting/////////////
@@ -77,6 +72,13 @@ window.onload = function(){
 		}
 		
 	});
+	function expandMessageForm(){
+		contactFormExpanded = true;
+		inputsContainer.classList.remove("hidden-inputs-container");
+		emailInput.disabled = false;
+		messageInput.disabled = false;
+		emailInput.focus();	
+	}
 
 	// Underlines fill on focus
 	emailInput.addEventListener("focus", e => {
@@ -95,7 +97,8 @@ window.onload = function(){
 
 /*
 
-icon web
+icon web HY
+copyright license on github
 
 make your own mailer!!!
 */
