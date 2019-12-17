@@ -226,22 +226,17 @@ body, html {
 }
 
 #email-input, #message-input {
-	padding: 0 0.3em;
+	padding: 0.2em 0.3em;
 	margin-top: 1em;
 	font-size: 0.3em;
 	width: 100%;
 	display: block;
 	outline: none;
+	font-family: "Arial";
 
 	background: var(--secondary-color);
 	color: var(--tertiary-color);
 	border: none;
-}
-#email-input {
-	height: 4em;
-}
-#message-input {
-	height: 4em;
 }
 
 #email-input-underline, #message-input-underline {
