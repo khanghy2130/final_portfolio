@@ -88,5 +88,16 @@ var projectsData = [
 			}
 		]
 	},
-	
+	{
+		imageSrc: "./project-images/more-projects.png",
+		name: "More projects...",
+		description: "Explore more projects I did under the name of Logix Indie, known for creating randomized puzzles.",
+		tags: ["jQuery", "Unity", "GIMP", "processing.js", "App Inventor", "App Lab"],
+		buttons: [
+			{
+				text: "Explore More",
+				link: "https://khanghy2130.github.io/Spread"
+			},
+		]
+	},
 ];
