@@ -31,14 +31,15 @@ body {
 }
 .btn-custom {
 	transition-duration: 0.3s;
-	border: var(--primary-color) solid 0.2em;
-	color: var(--primary-color);
-	background: var(--tertiary-color);
+
+	border: var(--tertiary-color) solid 0.2em;
+	color: var(--tertiary-color);
+	background: transparent;
 }
 .btn-custom:hover {
-	border-color: var(--tertiary-color);
-	color: var(--tertiary-color);
-	background: var(--primary-color);
+	border-color: transparent;
+	color: var(--secondary-color);
+	background: var(--tertiary-color);
 }
 
 /* WELCOME SECTION */
@@ -110,8 +111,59 @@ body {
 
 /* PROJECTS SECTION */
 #projects-section {
-	height: 80vh; /* tem */
-	
+	background: var(--secondary-color);
+}
+
+/* p for project */
+.p-panel {
+	width: 100%;
+	margin: 1em 0;
+}
+.p-img-div {
+	display:inline-block;
+	width: 50%;
+}
+.p-img-div > img {
+	width: 100%;
+	height: auto;
+}
+.p-info-div {
+	display:inline-block;
+	width: 50%;
+	padding: 0 0.3em;
+}
+.p-name {
+	color: var(--tertiary-color);
+	font-size: 0.45em;
+	text-align: left;
+}
+.p-tags-div {
+	display: block;
+	cursor: default;
+}
+/* each tag */
+.p-tags-div > p {
+	color: var(--secondary-color);
+	background: var(--quaternary-color);
+	border-radius: 0.3em;
+	font-size: 0.23em;
+
+	display: inline-block;
+	padding: 0.1em 0.3em;
+	margin: 0.2em 0.2em;
+	transition: background 0.3s;
+}
+.p-tags-div > p:hover {
+	background: var(--tertiary-color);
+}
+.p-description {
+	color: var(--quaternary-color);
+	text-align: justify;
+	font-size: 0.27em;
+}
+.p-buttons-div > a {
+	margin: 0.5em;
+	font-size: 0.3em;
 }
 
 /* ABOUT SECTION */
@@ -124,6 +176,7 @@ body {
 	color: var(--quaternary-color);
 	font-size: 0.3em;
 	font-weight: normal;
+	padding: 0.2em 2em;
 }
 
 /* THE FORM */
@@ -167,7 +220,6 @@ body {
 	display: inline-block;
 	background: transparent;
 	border: none;
-	outline: none;
 	transition: color 0.3s;
 	color: var(--quaternary-color);
 	font-size: 0.6em;
@@ -199,12 +251,12 @@ body {
 
 /* SLASH IMAGES */
 .slash-img {
-	background: linear-gradient(to bottom right, var(--primary-color) 50%, var(--secondary-color) 50%);
+	background: linear-gradient(to bottom right, var(--primary-color) 50%, transparent 50%);
 	height: 20vh;
 	border: none;
 }
 .slash-img:nth-of-type(2n) {
-	background: linear-gradient(to bottom right, var(--secondary-color) 50%, var(--primary-color) 50%);
+	background: linear-gradient(to bottom right, transparent 50%, var(--primary-color) 50%);
 }
 
 
@@ -239,5 +291,27 @@ body {
 @media only screen and (max-aspect-ratio: 6/5){
 	body {
 		font-size: 17vw;
+	}
+
+	.p-img-div {
+		width: 100%;
+	}
+	.p-info-div {
+		width: 100%;
+		padding: 0 0.1em;
+	}
+	.p-name {
+		text-align: center;
+	}
+	.p-tags-div {
+		justify-content: center;
+	}
+	
+	#about-paragraph {
+		text-align: justify;
+		color: var(--quaternary-color);
+		font-size: 0.3em;
+		font-weight: normal;
+		padding: 0.2em 0.5em;
 	}
 }

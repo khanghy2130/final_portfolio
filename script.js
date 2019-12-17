@@ -7,6 +7,7 @@ window.onload = function(){
 		themeSwitcher = document.getElementById("theme-switcher"),
 
 		headings = document.querySelectorAll(".my-heading"), // the only 2 headings
+		projectsContainer = document.getElementById("projects-container"), // contains project panels
 		animateCheckers = [],
 
 		contactForm = document.getElementById("contact-form"),
@@ -17,6 +18,57 @@ window.onload = function(){
 		messageInput = document.getElementById("message-input"),
 		emailInputUnderline = document.getElementById("email-input-underline"),
 		messageInputUnderline = document.getElementById("message-input-underline");
+
+	// creating project panel elements
+	projectsData.forEach(data => {
+		// creating strings of HTML then add them
+		let imgDiv = `
+			<div class="p-img-div">
+				<img src="${data.imageSrc}">
+			</div>
+		`;
+		let pName = `<h3 class="p-name">${data.name}</h3>`;
+		let pDescription = `<p class="p-description">${data.description}</p>`;
+
+		let pTags = "";
+		data.tags.forEach(tag => {
+			pTags += `<p>${tag}</p>`;
+		});
+		// adding parent element
+		pTags = `
+			<div class="p-tags-div d-flex flex-wrap">
+				${pTags}
+			</div>
+		`;
+
+		let pButtons = "";
+		data.buttons.forEach(b => {
+			pButtons += `
+				<a class="btn btn-custom" target="_blank" href="${b.link}">
+					${b.text}
+				</a>
+			`;
+		});
+		// adding parent element
+		pButtons = `
+			<div class="p-buttons-div d-flex justify-content-center">
+				${pButtons}
+			</div>
+		`;
+		
+		// adding project panel
+		projectsContainer.innerHTML += `
+			<div class="p-panel row d-flex">
+				${imgDiv}
+				<div class="p-info-div">
+					${pName}
+					${pTags}
+					${pDescription}
+					${pButtons}
+				</div>
+			</div>
+		`;
+	});
 
 	// add headings animate checkers
 	headings.forEach(heading => {
