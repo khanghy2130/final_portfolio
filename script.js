@@ -51,7 +51,7 @@ window.onload = function(){
 		});
 		// adding parent element
 		pButtons = `
-			<div class="p-buttons-div d-flex align-items-start justify-content-center">
+			<div class="p-buttons-div">
 				${pButtons}
 			</div>
 		`;
