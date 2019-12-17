@@ -41,7 +41,7 @@ var colorThemes = {
 
 var projectsData = [
 	{
-		imageSrc: "./project-images/spread.png",
+		imageSrc: "./project-images/explore.png",
 		name: "Explore",
 		description: "A place for people to share discoveries and comment on others.",
 		tags: ["Node.js", "Express.js", "MongoDB", "Passport.js", "EJS", "Moment.js", "Bootstrap"],
@@ -57,14 +57,14 @@ var projectsData = [
 		]
 	},
 	{
-		imageSrc: "./project-images/spread.png",
+		imageSrc: "./project-images/chatapp.png",
 		name: "Chat App",
 		description: "A chat app where users can create and join private or public rooms.",
 		tags: ["Node.js", "Express.js", "Socket.io"],
 		buttons: [
 			{
 				text: "View Live",
-				link: "project02-chatapp.herokuapp.com"
+				link: "http://project02-chatapp.herokuapp.com"
 			},
 			{
 				text: "Github",

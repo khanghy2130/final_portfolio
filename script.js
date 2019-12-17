@@ -74,8 +74,13 @@ window.onload = function(){
 	headings.forEach(heading => {
 		animateCheckers.push(animateChecker(heading, "my-heading-animated"));
 	});
-	// adding project panels animate checkers
-
+	// adding project panels animate checkers (img-div's and info-div's)
+	document.querySelectorAll(".p-img-div").forEach(ele => {
+		animateCheckers.push(animateChecker(ele, "p-img-div-animated"));
+	});
+	document.querySelectorAll(".p-info-div").forEach(ele => {
+		animateCheckers.push(animateChecker(ele, "p-info-div-animated"));
+	});
 
 	// run all animate checkers
 	window.onscroll = function(){animateCheckers.forEach(f => f());};
