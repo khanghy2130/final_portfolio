@@ -96,7 +96,7 @@ var projectsData = [
 		buttons: [
 			{
 				text: "Explore More",
-				link: "https://khanghy2130.github.io/Spread"
+				link: "https://khanghy2130.github.io"
 			},
 		]
 	},

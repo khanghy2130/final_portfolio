@@ -36,7 +36,7 @@ window.onload = function(){
 		});
 		// adding parent element
 		pTags = `
-			<div class="p-tags-div d-flex flex-wrap">
+			<div class="p-tags-div d-flex flex-wrap align-items-start">
 				${pTags}
 			</div>
 		`;
@@ -51,7 +51,7 @@ window.onload = function(){
 		});
 		// adding parent element
 		pButtons = `
-			<div class="p-buttons-div d-flex justify-content-center">
+			<div class="p-buttons-div d-flex align-items-start justify-content-center">
 				${pButtons}
 			</div>
 		`;
@@ -155,7 +155,6 @@ window.onload = function(){
 /*
 
 icon web HY
-copyright license on github
 
 make your own mailer!!!
 */
