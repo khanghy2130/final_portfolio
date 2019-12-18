@@ -181,17 +181,18 @@ body, html {
 .p-description {
 	color: var(--quaternary-color);
 	text-align: justify;
-	font-size: 0.27em;
-	margin-bottom: 0;
+	font-size: 0.28em;
+	margin: 0.3em 0;
 }
 .p-buttons-div {
 	text-align: center;
+	font-size: 0.5em;
 }
 .p-buttons-div > a {
 	display: inline-block;
 	margin: 0 0.5em;
 	padding: 0.5em;
-	font-size: 0.28em;
+	font-size: 0.5em;
 }
 
 /* ABOUT SECTION */
@@ -226,7 +227,7 @@ body, html {
 }
 
 #email-input, #message-input {
-	padding: 0.2em 0.3em;
+	padding: 0.4em;
 	margin-top: 1em;
 	font-size: 0.3em;
 	width: 100%;

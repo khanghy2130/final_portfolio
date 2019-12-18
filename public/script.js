@@ -122,11 +122,13 @@ window.onload = function(){
 			expandMessageForm();
 		}
 
-		// submitting/////////////
+		/*
+		// submitting
 		else {
 			e.preventDefault();
 			console.log("submitted");
 		}
+		*/
 		
 	});
 	function expandMessageForm(){
