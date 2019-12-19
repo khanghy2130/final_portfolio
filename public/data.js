@@ -17,17 +17,17 @@ var colorThemes = {
 /*
 	Each project data structure
 	{
-		imageSrc: "",
+		imageSrc: "./project-images/",
 		name: "",
 		description: "",
 		tags: ["", ""],
 		buttons: [
 			{
-				text: "",
+				text: "View Live",
 				link: ""
 			},
 			{
-				text: "",
+				text: "Github",
 				link: ""
 			}
 		]
@@ -84,8 +84,25 @@ var projectsData = [
 		]
 	},
 	{
+		imageSrc: "./project-images/rotatic.png",
+		name: "Rotatic",
+		description: "An unique puzzle game with in-game level editor.",
+		tags: ["p5.js"],
+		buttons: [
+			{
+				text: "View Live",
+				link: "https://khanghy2130.github.io/Rotatic"
+			},
+			{
+				text: "Github",
+				link: "https://github.com/khanghy2130/Rotatic"
+			}
+		]
+	},
+
+	{
 		imageSrc: "./project-images/more-projects.png",
-		name: "More projects...",
+		name: "Extra projects",
 		description: "Explore more projects I did under the name of Logix Indie, known for creating randomized puzzles.",
 		tags: ["jQuery", "Unity", "GIMP", "processing.js", "App Inventor", "App Lab"],
 		buttons: [
@@ -94,5 +111,5 @@ var projectsData = [
 				link: "https://khanghy2130.github.io"
 			},
 		]
-	},
+	}
 ];
