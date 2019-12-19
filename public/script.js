@@ -82,17 +82,19 @@ window.onload = function(){
 		animateCheckers.push(animateChecker(ele, "p-info-div-animated"));
 	});
 
-	// run all animate checkers
-	window.onscroll = function(){animateCheckers.forEach(f => f());};
+	// run all animate checkers when scroll
+	window.onscroll = function(){
+		// filter out the ones which return false as they are animated
+		animateCheckers = animateCheckers.filter(checker => checker() === true);
+	};
 
 	function animateChecker(ele, className){
-		let animated = false; // closure
 		return () => {
-			if (animated) return; // stop function if already animated
 			if (isNotBelowViewport(ele)){
 				ele.classList.add(className);
-				animated = true;
+				return false;
 			}
+			return true;
 		};
 	}
 	function isNotBelowViewport(ele) {
@@ -119,11 +121,16 @@ window.onload = function(){
 		// show the form (one time action)
 		if (!contactFormExpanded){
 			e.preventDefault();
-			expandMessageForm();
+			// expanding the message form
+			contactFormExpanded = true;
+			inputsContainer.classList.remove("hidden-inputs-container");
+			emailInput.disabled = false;
+			messageInput.disabled = false;
+			emailInput.focus();	
 		}
 
 		/*
-		// submitting
+		// disable submitting
 		else {
 			e.preventDefault();
 			console.log("submitted");
@@ -131,13 +138,6 @@ window.onload = function(){
 		*/
 		
 	});
-	function expandMessageForm(){
-		contactFormExpanded = true;
-		inputsContainer.classList.remove("hidden-inputs-container");
-		emailInput.disabled = false;
-		messageInput.disabled = false;
-		emailInput.focus();	
-	}
 
 	// Underlines fill on focus
 	emailInput.addEventListener("focus", e => {
@@ -153,11 +153,3 @@ window.onload = function(){
 		messageInputUnderline.classList.remove("focus-underline");
 	});
 }
-
-/*
-
-icon web HY
-
-make your own mailer!!!
-*/
-

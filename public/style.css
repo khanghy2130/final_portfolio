@@ -114,6 +114,9 @@ body, html {
 #projects-section {
 	background: var(--secondary-color);
 }
+#projects-container {
+	padding: 0 0.8em;
+}
 
 /* p for project */
 .p-panel {
@@ -330,6 +333,10 @@ body, html {
 
 	#theme-switcher {
 		font-size: 0.8em;
+	}
+
+	#projects-container {
+		padding: 0;
 	}
 
 	.p-img-div {
