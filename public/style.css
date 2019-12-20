@@ -43,8 +43,24 @@ body, html {
 	background: var(--tertiary-color);
 }
 
+/* MESSAGE STATUS */
+#message-status-failure, #message-status-success {
+	text-align: center;
+	font-size: 0.2em;
+	padding: 0.2em 0.1em;
+	color: #eee;
+}
+#message-status-failure {
+	background: #f2381f;
+}
+#message-status-success {
+	background: #2bc916;
+}
+
+
 /* WELCOME SECTION */
 #welcome-section {
+	position: relative;
 	height: 110vh;
 	transition-duration: 0.5s; /* theme switching duration */
 }

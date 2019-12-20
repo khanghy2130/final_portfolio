@@ -12,6 +12,14 @@
 <!-- body is hidden until the page is loaded -->
 <body class="text-light bg-my-secondary" hidden>
 
+	<!-- Message Status -->
+	<div hidden id="message-status-failure">
+		Unfortunately, your submission was unsuccessful.
+	</div>
+	<div hidden id="message-status-success">
+		Your submission was successful!
+	</div>
+
 	<!-- Welcome section -->
 	<section id="welcome-section" class="container-fluid d-flex flex-column justify-content-center text-center bg-my-primary text-my-tertiary">
 
@@ -47,7 +55,7 @@
 		<p id="about-paragraph">That's me! I'm a web developer located in Dallas-Fort Worth area of Texas. Problem solving has always been my biggest interest. I'm excited for opportunities to actualize ideas with great people, as well as to master the tools that make it possible.</p>
 
 		<!-- https://api.slapform.com/khanghy2130@gmail.com -->
-		<form id="contact-form" class="text-center" method="POST" action="https://api.slapform.com/khanghy2130@gmail.com">
+		<form id="contact-form" class="text-center" method="POST" action="http://project03-mailer.herokuapp.com/portfolio-message">
 
 			<div id="inputs-container" class="hidden-inputs-container d-flex flex-column">
 				<input id="email-input" disabled type="email" name="email" placeholder="Your email" required>

@@ -19,6 +19,16 @@ window.onload = function(){
 		emailInputUnderline = document.getElementById("email-input-underline"),
 		messageInputUnderline = document.getElementById("message-input-underline");
 
+
+	// show message submission status
+	const urlParams = new URLSearchParams(window.location.search);
+	const messageStatus = urlParams.get('messageStatus');
+	if (messageStatus === "failure"){
+		document.getElementById("message-status-failure").hidden = false;
+	} else if (messageStatus === "success"){
+		document.getElementById("message-status-success").hidden = false;
+	}
+
 	// creating project panel elements
 	projectsData.forEach(data => {
 		// creating strings of HTML then add them
@@ -121,12 +131,29 @@ window.onload = function(){
 		// show the form (one time action)
 		if (!contactFormExpanded){
 			e.preventDefault();
+
 			// expanding the message form
 			contactFormExpanded = true;
 			inputsContainer.classList.remove("hidden-inputs-container");
 			emailInput.disabled = false;
 			messageInput.disabled = false;
 			emailInput.focus();	
+
+			// send a request to server to wake it up
+		    httpGet("http://project03-mailer.herokuapp.com/", (res) => {
+		    	console.log("Server is on.");
+		    });
+
+		    function httpGet(aUrl, aCallback) {
+		        var anHttpRequest = new XMLHttpRequest();
+		        anHttpRequest.onreadystatechange = function() { 
+		            if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+		                aCallback(anHttpRequest.responseText);
+		        }
+
+		        anHttpRequest.open( "GET", aUrl, true );            
+		        anHttpRequest.send( null );
+		    }
 		}
 
 		/*
