@@ -46,7 +46,7 @@ body, html {
 /* MESSAGE STATUS */
 #message-status-failure, #message-status-success {
 	text-align: center;
-	font-size: 0.2em;
+	font-size: 0.23em;
 	padding: 0.2em 0.1em;
 	color: #eee;
 }
@@ -233,12 +233,14 @@ body, html {
 	transition: 0.3s;
 	font-size: 0.5em;
 	padding: 0.3em 0.6em;
+	margin: 0 0 1em 0;
 	font-size: 0.4em;
 }
 #inputs-container {
+	margin: 0.2em 0;
 	padding: 0 2em;
 	overflow: hidden;
-	max-height: 50vh;
+	max-height: 60vh;
 	transition: max-height 0.6s linear;
 }
 .hidden-inputs-container {
@@ -268,6 +270,12 @@ body, html {
 .focus-underline {
 	width: 100% !important;
 }
+#note-message {
+	font-family: Arial;
+	font-size: 0.25em;
+	margin: 0;
+	margin-top: 0.4em;
+}
 
 #links-footer > a {
 	display: inline-block;
@@ -285,6 +293,8 @@ body, html {
 	color: var(--quaternary-color);
 	font-size: 0.2em;
 	margin: 0;
+	text-align: center;
+	padding: 1em;
 }
 
 

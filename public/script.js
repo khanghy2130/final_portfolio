@@ -138,22 +138,6 @@ window.onload = function(){
 			emailInput.disabled = false;
 			messageInput.disabled = false;
 			emailInput.focus();	
-
-			// send a request to server to wake it up
-		    httpGet("http://project03-mailer.herokuapp.com/", (res) => {
-		    	console.log("Server is on.");
-		    });
-
-		    function httpGet(aUrl, aCallback) {
-		        var anHttpRequest = new XMLHttpRequest();
-		        anHttpRequest.onreadystatechange = function() { 
-		            if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
-		                aCallback(anHttpRequest.responseText);
-		        }
-
-		        anHttpRequest.open( "GET", aUrl, true );            
-		        anHttpRequest.send( null );
-		    }
 		}
 
 		/*
