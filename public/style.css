@@ -49,7 +49,6 @@ body, html {
 	text-align: center;
 	font-size: 0.23em;
 	padding: 0.2em 0.1em;
-	color: #eee;
 }
 #message-status-failure {
 	background: #f2381f;
@@ -57,6 +56,14 @@ body, html {
 #message-status-success {
 	background: #2bc916;
 }
+
+#message-status-section a {
+	color: #eee;
+}
+#message-status-section a:hover {
+	text-decoration: line-through;
+}
+
 
 
 /* WELCOME SECTION */
