@@ -15,7 +15,7 @@ var colorThemes = {
 };
 
 /*
-	Each project data structure
+	Each project data structure. add noNewTab : true to button to keep in same tab
 	{
 		imageSrc: "./project-images/",
 		name: "",
@@ -68,6 +68,25 @@ var projectsData = [
 		]
 	},
 	{
+		imageSrc: "./project-images/mailer.png",
+		name: "Mailer",
+		description: "This server receives message submissions from this portfolio, then it sends the details to my inbox.",
+		tags: ["Node.js", "Express.js", "Nodemailer"],
+		buttons: [
+			{
+				text: "Send Message",
+				link: "#contact-form",
+				noNewTab : true
+			},
+			{
+				text: "Github",
+				link: "https://github.com/khanghy2130/mailer"
+			}
+		]
+	},
+
+
+	{
 		imageSrc: "./project-images/spread.png",
 		name: "Spread",
 		description: "This program takes in user inputs and procedurally generates tiles. The process is fully visualized.",
@@ -99,7 +118,6 @@ var projectsData = [
 			}
 		]
 	},
-
 	{
 		imageSrc: "./project-images/more-projects.png",
 		name: "Extra projects",

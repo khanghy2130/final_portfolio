@@ -53,8 +53,9 @@ window.onload = function(){
 
 		let pButtons = "";
 		data.buttons.forEach(b => {
+			let targetAttribute = (b.noNewTab) ? "" : `target="_blank"`;
 			pButtons += `
-				<a class="btn btn-custom" target="_blank" href="${b.link}">
+				<a class="btn btn-custom" href="${b.link}" ${targetAttribute}>
 					${b.text}
 				</a>
 			`;
