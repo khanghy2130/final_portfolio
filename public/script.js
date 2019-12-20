@@ -11,6 +11,7 @@ window.onload = function(){
 		animateCheckers = [],
 
 		contactForm = document.getElementById("contact-form"),
+		submitBtn = document.getElementById("form-submit-btn"),
 		contactFormExpanded = false, // click to expand then click to submit
 
 		inputsContainer = document.getElementById("inputs-container"),
@@ -138,7 +139,7 @@ window.onload = function(){
 			inputsContainer.classList.remove("hidden-inputs-container");
 			emailInput.disabled = false;
 			messageInput.disabled = false;
-			emailInput.focus();	
+			submitBtn.blur();	
 		}
 
 		/*
