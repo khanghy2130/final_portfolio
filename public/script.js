@@ -118,8 +118,10 @@ window.onload = function(){
 		let theme;
 		if (usingDarkTheme){
 			theme = colorThemes.lightTheme;
+			themeSwitcher.innerText = "Theme: Light";
 		} else {
 			theme = colorThemes.darkTheme;
+			themeSwitcher.innerText = "Theme: Dark";
 		}
 
 		usingDarkTheme = !usingDarkTheme;

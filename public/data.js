@@ -7,9 +7,9 @@ var colorThemes = {
 		"--quaternary-color" : "#eee"
 	},
 	lightTheme : {
-		"--primary-color" : "#cfcfcf",
+		"--primary-color" : "#dcdcdc",
 		"--secondary-color" : "#eaeaea",
-		"--tertiary-color" : "#ff471a",
+		"--tertiary-color" : "#ff4d21",
 		"--quaternary-color" : "#444"
 	}
 };

@@ -79,12 +79,12 @@ body, html {
 	outline: none;
 	transition-duration: 0.3s;
 	color: var(--quaternary-color);
-	font-size: 0.5em;
+	font-size: 0.27em;
 
 	padding: 0;
 	position: absolute;
-	top: 1vh;
-	left: 2vw;
+	top: 2vh;
+	right: 3vw;
 }
 #theme-switcher:hover {
 	color: var(--tertiary-color);
@@ -366,7 +366,7 @@ body, html {
 	}
 
 	#theme-switcher {
-		font-size: 0.8em;
+		font-size: 0.33em;
 	}
 
 	#projects-container {
