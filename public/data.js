@@ -7,7 +7,7 @@ var colorThemes = {
 		"--quaternary-color" : "#eee"
 	},
 	lightTheme : {
-		"--primary-color" : "#dcdcdc",
+		"--primary-color" : "#dfdfdf",
 		"--secondary-color" : "#eaeaea",
 		"--tertiary-color" : "#ff4d21",
 		"--quaternary-color" : "#444"
@@ -105,7 +105,7 @@ var projectsData = [
 	{
 		imageSrc: "./project-images/rotatic.png",
 		name: "Rotatic",
-		description: "An unique puzzle game with in-game level editor.",
+		description: "An unique puzzle game with in-game level editor. Featuring intriguing mechanism and smooth animations.",
 		tags: ["p5.js"],
 		buttons: [
 			{

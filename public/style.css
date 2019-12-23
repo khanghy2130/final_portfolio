@@ -37,6 +37,7 @@ body, html {
 	color: var(--tertiary-color);
 	background: transparent;
 	padding: 0;
+	border-radius: 0.5em;
 }
 .btn-custom:hover {
 	border-color: transparent;
@@ -83,8 +84,8 @@ body, html {
 
 	padding: 0;
 	position: absolute;
-	top: 2vh;
-	right: 3vw;
+	top: 1.5vh;
+	right: 3.2vw;
 }
 #theme-switcher:hover {
 	color: var(--tertiary-color);
@@ -370,7 +371,7 @@ body, html {
 	}
 
 	#projects-container {
-		padding: 0;
+		padding: 0 0.2em;
 	}
 
 	.p-img-div {
@@ -397,5 +398,43 @@ body, html {
 
 	#inputs-container {
 		padding: 0;
+	}
+}
+
+/* wide screen */
+@media only screen and (min-width: 1200px){
+	body {
+		font-size: 6vw;
+	}
+
+	#projects-container {
+		padding: 0 1.2em;
+	}
+
+	.p-panel {
+		width: 50%;
+		display: inline-block;
+		padding: 0 0.4em;
+	}
+	.p-img-div {
+		width: 100%;
+	}
+	.p-info-div {
+		width: 100%;
+		padding: 0 0.1em;
+	}
+	.p-name {
+		text-align: center;
+	}
+	.p-tags-div {
+		justify-content: center;
+	}
+	
+	#about-paragraph {
+		padding: 0.2em 5em;
+	}
+
+	#inputs-container {
+		padding: 0 4em;
 	}
 }
