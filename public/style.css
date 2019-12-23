@@ -417,7 +417,7 @@ body, html {
 		padding: 0 0.4em;
 	}
 	.p-panel:nth-child(2n - 1) {
-		transform: translateY(10vh);
+		transform: translateY(10vh); /* shift one column down */
 	}
 
 	.p-img-div {

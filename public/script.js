@@ -1,4 +1,19 @@
 "use strict";
+var colorThemes = {
+	darkTheme : {
+		"--primary-color" : "#222",
+		"--secondary-color" : "#2d2d2d",
+		"--tertiary-color" : "#cf6eff",
+		"--quaternary-color" : "#eee"
+	},
+	lightTheme : {
+		"--primary-color" : "#dfdfdf",
+		"--secondary-color" : "#eaeaea",
+		"--tertiary-color" : "#ff4d21",
+		"--quaternary-color" : "#444"
+	}
+};
+
 window.onload = function(){
 	document.body.hidden = false; // show body after page loaded
 
@@ -30,68 +45,33 @@ window.onload = function(){
 		document.getElementById("message-status-success").hidden = false;
 	}
 
-	// creating project panel elements
-	projectsData.forEach(data => {
-		// creating strings of HTML then add them
-		let imgDiv = `
-			<div class="p-img-div">
-				<img src="${data.imageSrc}">
-			</div>
-		`;
-		let pName = `<h3 class="p-name">${data.name}</h3>`;
-		let pDescription = `<p class="p-description">${data.description}</p>`;
+	// Load data.json
+	fetch("./public/data.json")
+		.then(res => res.json())
+		.then(projectsData => {
+			console.log("Projects data loaded.");
 
-		let pTags = "";
-		data.tags.forEach(tag => {
-			pTags += `<p>${tag}</p>`;
-		});
-		// adding parent element
-		pTags = `
-			<div class="p-tags-div d-flex flex-wrap align-items-start">
-				${pTags}
-			</div>
-		`;
+			// creating all project panel elements
+			projectsData.forEach(createProjectPanel);
 
-		let pButtons = "";
-		data.buttons.forEach(b => {
-			let targetAttribute = (b.noNewTab) ? "" : `target="_blank"`;
-			pButtons += `
-				<a class="btn btn-custom" href="${b.link}" ${targetAttribute}>
-					${b.text}
-				</a>
-			`;
-		});
-		// adding parent element
-		pButtons = `
-			<div class="p-buttons-div">
-				${pButtons}
-			</div>
-		`;
-		
-		// adding project panel
-		projectsContainer.innerHTML += `
-			<div class="p-panel row d-flex">
-				${imgDiv}
-				<div class="p-info-div">
-					${pName}
-					${pTags}
-					${pDescription}
-					${pButtons}
-				</div>
-			</div>
-		`;
-	});
+			// after created all: add animate checkers for them
+			document.querySelectorAll(".p-img-div").forEach(ele => {
+				animateCheckers.push(animateChecker(ele, "p-img-div-animated"));
+			});
+			document.querySelectorAll(".p-info-div").forEach(ele => {
+				animateCheckers.push(animateChecker(ele, "p-info-div-animated"));
+			});
+
+		})
+		.catch(err => {
+			console.log("ERROR WHILE FETCHING\n", err);
+		})
+	;
+
 
 	// add headings animate checkers
 	headings.forEach(heading => {
 		animateCheckers.push(animateChecker(heading, "my-heading-animated"));
-	});
-	// adding project panels animate checkers (img-div's and info-div's)
-	document.querySelectorAll(".p-img-div").forEach(ele => {
-		animateCheckers.push(animateChecker(ele, "p-img-div-animated"));
-	});
-	document.querySelectorAll(".p-info-div").forEach(ele => {
-		animateCheckers.push(animateChecker(ele, "p-info-div-animated"));
 	});
 
 	// run all animate checkers when scroll
@@ -167,4 +147,76 @@ window.onload = function(){
 	messageInput.addEventListener("blur", e => {
 		messageInputUnderline.classList.remove("focus-underline");
 	});
+
+	function createProjectPanel(data){
+		// creating strings of HTML then add them
+		let imgDiv = `
+			<div class="p-img-div">
+				<img src="${data.imageSrc}">
+			</div>
+		`;
+		let pName = `<h3 class="p-name">${data.name}</h3>`;
+		let pDescription = `<p class="p-description">${data.description}</p>`;
+
+		let pTags = "";
+		data.tags.forEach(tag => {
+			pTags += `<p>${tag}</p>`;
+		});
+		// adding parent element
+		pTags = `
+			<div class="p-tags-div d-flex flex-wrap align-items-start">
+				${pTags}
+			</div>
+		`;
+
+		let pButtons = "";
+		data.buttons.forEach(b => {
+			let targetAttribute = (b.noNewTab) ? "" : `target="_blank"`;
+			pButtons += `
+				<a class="btn btn-custom" href="${b.link}" ${targetAttribute}>
+					${b.text}
+				</a>
+			`;
+		});
+		// adding parent element
+		pButtons = `
+			<div class="p-buttons-div">
+				${pButtons}
+			</div>
+		`;
+		
+		// adding project panel
+		projectsContainer.innerHTML += `
+			<div class="p-panel row d-flex">
+				${imgDiv}
+				<div class="p-info-div">
+					${pName}
+					${pTags}
+					${pDescription}
+					${pButtons}
+				</div>
+			</div>
+		`;
+	}
 }
+
+/*
+	Each project data structure. add "noNewTab" : true to button to keep in same tab
+
+	{
+		"imageSrc": "./project-images/",
+		"name": "",
+		"description": "",
+		"tags": ["", ""],
+		"buttons": [
+			{
+				"text": "View Live",
+				"link": ""
+			},
+			{
+				"text": "Github",
+				"link": ""
+			}
+		]
+	},
+*/
