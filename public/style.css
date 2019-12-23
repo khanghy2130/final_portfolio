@@ -416,6 +416,10 @@ body, html {
 		display: inline-block;
 		padding: 0 0.4em;
 	}
+	.p-panel:nth-child(2n - 1) {
+		transform: translateY(10vh);
+	}
+
 	.p-img-div {
 		width: 100%;
 	}
