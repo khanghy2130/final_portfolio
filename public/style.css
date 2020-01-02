@@ -135,6 +135,27 @@ body, html {
 	}
 }
 
+/* SKILL SECTION */
+#skills-container {
+	text-align: center;
+	padding: 0 2em;
+}
+
+#skills-container > p {
+	color: var(--secondary-color);
+	background: var(--quaternary-color);
+	border-radius: 0.3em;
+	font-size: 0.3em;
+
+	display: inline-block;
+	padding: 0.2em 0.5em;
+	margin: 0.3em;
+	transition: background 0.3s;
+}
+#skills-container > p:hover {
+	background: var(--tertiary-color);
+}
+
 /* PROJECTS SECTION */
 #projects-section {
 	background: var(--secondary-color);
@@ -368,6 +389,10 @@ body, html {
 
 	#theme-switcher {
 		font-size: 0.33em;
+	}
+
+	#skills-container {
+		padding: 0 0.2em;
 	}
 
 	#projects-container {
