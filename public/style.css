@@ -150,10 +150,15 @@ body, html {
 	display: inline-block;
 	padding: 0.2em 0.5em;
 	margin: 0.3em;
-	transition: background 0.3s;
+
+	transition-duration: 1s;
+	transition-property: opacity, transform;
+	opacity: 0;
+	transform: translateY(10vh);
 }
-#skills-container > p:hover {
-	background: var(--tertiary-color);
+.skill-tag-animated {
+	opacity: 1 !important;
+	transform: translateY(0vh) !important;
 }
 
 /* PROJECTS SECTION */
@@ -333,7 +338,7 @@ body, html {
 	color: var(--tertiary-color);
 	font-size: 0.55em;
 	transition-duration: 1s;
-	transition-property: color, opacity, transform;
+	transition-property: opacity, transform;
 
 	opacity: 0;
 	transform: translateY(10vh);
@@ -392,7 +397,7 @@ body, html {
 	}
 
 	#skills-container {
-		padding: 0 0.2em;
+		padding: 0.2em 0.2em;
 	}
 
 	#projects-container {

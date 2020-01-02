@@ -22,6 +22,7 @@ window.onload = function(){
 		themeSwitcher = document.getElementById("theme-switcher"),
 
 		headings = document.querySelectorAll(".my-heading"), // the only 2 headings
+		skillsContainer = document.getElementById("skills-container"),
 		projectsContainer = document.getElementById("projects-container"), // contains project panels
 		animateCheckers = [],
 
@@ -92,6 +93,23 @@ window.onload = function(){
 	function isNotBelowViewport(ele) {
 	    return ele.getBoundingClientRect().bottom <= (window.innerHeight || document.documentElement.clientHeight);
 	}
+
+	// custom animate checker for skills-container
+	animateCheckers.push(() => {
+		if (isNotBelowViewport(skillsContainer)){
+			// set timeout to animate all skill tags
+			const skillTags = document.querySelectorAll("#skills-container > p");
+			skillTags.forEach((tag, index) =>{
+				setTimeout(() => {
+					tag.classList.add("skill-tag-animated");
+				}, 200 * index);
+			});
+
+			return false;
+		}
+		return true;
+	});
+
 
 	// theme switcher function
 	themeSwitcher.addEventListener("click", ()=>{
