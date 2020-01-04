@@ -446,8 +446,8 @@ body, html {
 		display: inline-block;
 		padding: 0 0.4em;
 	}
-	.p-panel:nth-child(2n - 1) {
-		transform: translateY(10vh); /* shift one column down */
+	.p-panel:nth-child(2n - 1):not(:last-child) {
+		transform: translateY(10vh); /* shift down for all odd elements, except last one */
 	}
 
 	.p-img-div {
