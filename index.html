@@ -8,6 +8,10 @@
 	<link rel="icon" href="./public/icon.png">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta
+      name="description"
+      content="Fullstack developer portfolio."
+    />
 </head>
 <!-- body is hidden until the page is loaded -->
 <body class="text-light bg-my-secondary" hidden>
@@ -75,7 +79,46 @@
 	<section id="about-section" class="container-fluid bg-my-secondary" >
 
 		<h1 class="my-heading text-center py-2 m-0">Who is Hy Nguyen?</h1>
-		<p id="about-paragraph">That's me! I'm a passionate web developer located in Dallas-Fort Worth area of Texas. Problem solving has always been my biggest interest. I'm excited for opportunities to actualize ideas with great people, as well as to explore and master the tools that make it possible.</p>
+		<div id="about-content">
+			<p>That's me! I'm a passionate web developer located in Dallas-Fort Worth area of Texas. Problem solving has always been my biggest interest. I'm excited for opportunities to actualize ideas with great people, as well as to explore and master the tools that make it possible.</p>
+
+			<div id="collapsable-div" class="collapsed-div">
+				<p class="m-0">Things I value:</p>
+				<ul>
+					<li>Clean, optimized, maintainable codes.</li>
+					<li>Implement best security practices.</li>
+					<li>Efficiency in communication and workflow.</li>
+					<li>Teamwork is the key to long-term success.</li>
+				</ul>
+
+				<p class="m-0">My hobbies include:</p>
+				<div id="hobbies-div">
+					<div class="hobby-item">
+						<p>• Collecting puzzle toys.</p>
+						<img src="./public/hobby-images/hobby1.jpg" />
+					</div>
+					<div class="hobby-item">
+						<p>• Playing puzzle video games.</p>
+						<img src="./public/hobby-images/hobby2.jpg" />
+					</div>
+					<div class="hobby-item">
+						<p>• Creating my own puzzles.</p>
+						<img src="./public/hobby-images/hobby3.jpg" />
+					</div>
+					<div class="hobby-item">
+						<p>• Solving programming challenges.</p>
+						<img src="./public/hobby-images/hobby4.jpg" />
+					</div>	
+				</div>
+
+				<div id="collapsed-div-cover"></div>
+			</div>
+
+			<div class="text-right">
+				<button id="read-more-btn" onclick="readMore()">▾ Read more</button>
+			</div>
+		</div>
+		
 
 		<!-- https://api.slapform.com/khanghy2130@gmail.com -->
 		<form id="contact-form" class="text-center" method="POST" action="http://project03-mailer.herokuapp.com/portfolio-message">
@@ -95,7 +138,7 @@
 			<button id="form-submit-btn" class="btn btn-custom">Let's talk</button>
 		</form>
 
-		<div id="links-footer" class="text-center px-2 pb-2">
+		<div id="links-footer">
 			<a href="https://github.com/khanghy2130" target="_blank">
 				<svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
 			</a>

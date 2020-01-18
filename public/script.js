@@ -218,6 +218,13 @@ window.onload = function(){
 	}
 }
 
+function readMore(){
+	// hide the Read More button
+	document.getElementById("read-more-btn").hidden = true;
+	// expand the collapsed div
+	document.getElementById("collapsable-div").classList.remove("collapsed-div");
+}
+
 /*
 	Each project data structure. add "noNewTab" : true to button to keep in same tab
 
