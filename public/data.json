@@ -1,4 +1,20 @@
-[
+[	
+	{
+		"imageSrc": "./project-images/burlesonnails.png",
+		"name": "Burleson Nails Spa",
+		"description": "A single page website for a local business.",
+		"tags": ["React", "SASS", "SEO"],
+		"buttons": [
+			{
+				"text": "View Live",
+				"link": "https://www.burlesonnails.com/"
+			},
+			{
+				"text": "Github",
+				"link": "https://github.com/khanghy2130/burlesonnails"
+			}
+		]
+	},
 	{
 		"imageSrc": "./project-images/explore.png",
 		"name": "Explore",
