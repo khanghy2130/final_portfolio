@@ -47,23 +47,6 @@
 			}
 		]
 	},
-	{
-		"imageSrc": "./project-images/mailer.png",
-		"name": "Mailer",
-		"description": "This server receives message submissions from this portfolio, then it sends the details to my inbox.",
-		"tags": ["Node.js", "Express.js", "Nodemailer"],
-		"buttons": [
-			{
-				"text": "Send Message",
-				"link": "#contact-form",
-				"noNewTab" : true
-			},
-			{
-				"text": "Github",
-				"link": "https://github.com/khanghy2130/mailer"
-			}
-		]
-	},
 
 
 	{
