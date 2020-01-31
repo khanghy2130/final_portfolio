@@ -366,12 +366,6 @@ body, html {
 .focus-underline {
 	width: 100% !important;
 }
-#note-message {
-	font-family: Arial;
-	font-size: 0.25em;
-	margin: 0;
-	margin-top: 0.4em;
-}
 
 #links-footer {
 	text-align: center;
