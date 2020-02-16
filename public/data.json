@@ -3,7 +3,7 @@
 		"imageSrc": "./project-images/burlesonnails.png",
 		"name": "Burleson Nails Spa",
 		"description": "A single page website for a local business.",
-		"tags": ["React", "SASS", "SEO"],
+		"tags": ["React", "SASS", "Gatsby.js", "SEO"],
 		"buttons": [
 			{
 				"text": "View Live",
