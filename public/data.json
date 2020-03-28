@@ -1,8 +1,24 @@
 [	
 	{
+		"imageSrc": "./project-images/frames.png",
+		"name": "Frames",
+		"description": "A space for GIFs collectors, where users can create account to collect GIFs and make friends with others to see more of their collections.",
+		"tags": ["MERN stack", "SASS", "Okta", "GraphQL", "Next.js", "GIPHY API", "DiceBear Avatars"],
+		"buttons": [
+			{
+				"text": "View Live",
+				"link": "https://project04-frames.herokuapp.com/landing"
+			},
+			{
+				"text": "Github",
+				"link": "https://github.com/khanghy2130/Frames"
+			}
+		]
+	},
+	{
 		"imageSrc": "./project-images/burlesonnails.png",
 		"name": "Burleson Nails Spa",
-		"description": "A single page website for a local business.",
+		"description": "A static page website for a local business.",
 		"tags": ["React", "SASS", "Gatsby.js", "SEO"],
 		"buttons": [
 			{
@@ -19,7 +35,7 @@
 		"imageSrc": "./project-images/explore.png",
 		"name": "Explore",
 		"description": "A place for people to share discoveries and comment on others.",
-		"tags": ["Node.js", "Express.js", "MongoDB", "Passport.js", "EJS", "Moment.js", "Bootstrap", "REST API"],
+		"tags": ["Node.js", "Express.js", "MongoDB", "Passport.js", "EJS", "Bootstrap", "REST API"],
 		"buttons": [
 			{
 				"text": "View Live",
