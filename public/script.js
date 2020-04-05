@@ -37,15 +37,6 @@ window.onload = function(){
 		messageInputUnderline = document.getElementById("message-input-underline");
 
 
-	// show message submission status
-	const urlParams = new URLSearchParams(window.location.search);
-	const messageStatus = urlParams.get('messageStatus');
-	if (messageStatus === "failure"){
-		document.getElementById("message-status-failure").hidden = false;
-	} else if (messageStatus === "success"){
-		document.getElementById("message-status-success").hidden = false;
-	}
-
 	// Load data.json
 	fetch("./public/data.json")
 		.then(res => res.json())
