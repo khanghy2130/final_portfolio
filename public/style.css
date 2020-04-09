@@ -227,10 +227,6 @@ body, html {
 	display: inline-block;
 	padding: 0.1em 0.3em;
 	margin: 0.2em 0.2em;
-	transition: background 0.3s;
-}
-.p-tags-div > p:hover {
-	background: var(--tertiary-color);
 }
 .p-description {
 	color: var(--quaternary-color);
