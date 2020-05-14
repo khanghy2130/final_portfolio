@@ -17,6 +17,23 @@
 	},
 
 	{
+		"imageSrc": "./project-images/chesspuzzle.png",
+		"name": "Chess Puzzle",
+		"description": "A multiplayer game on the browser. Featuring procedurally generated levels.",
+		"tags": ["Typescript", "React", "SASS", "Node.js", "Express.js", "Socket.io"],
+		"buttons": [
+			{
+				"text": "View Live",
+				"link": "http://project05-chesspuzzle.herokuapp.com"
+			},
+			{
+				"text": "Github",
+				"link": "https://github.com/khanghy2130/chess_puzzle"
+			}
+		]
+	},
+
+	{
 		"imageSrc": "./project-images/burlesonnails.png",
 		"name": "Burleson Nails Spa",
 		"description": "A static page website for a local business.",
@@ -104,7 +121,7 @@
 	{
 		"imageSrc": "./project-images/letscode.png",
 		"name": "Let's build a game",
-		"description": "A let's-code video about building a game on the web. The original game is called Longcat, from a mobile app called Fancade.",
+		"description": "A let's-code video about building a game on browser with p5.js, a canvas library.",
 		"tags": ["p5.js"],
 		"buttons": [
 			{
