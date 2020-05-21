@@ -24,7 +24,7 @@
 		"buttons": [
 			{
 				"text": "View Live",
-				"link": "http://project05-chesspuzzle.herokuapp.com"
+				"link": "http://project03-chesspuzzle.herokuapp.com"
 			},
 			{
 				"text": "Github",
