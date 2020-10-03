@@ -24,7 +24,7 @@
 		"buttons": [
 			{
 				"text": "View Live",
-				"link": "http://project03-chesspuzzle.herokuapp.com"
+				"link": "https://project03-chesspuzzle.herokuapp.com"
 			},
 			{
 				"text": "Github",
@@ -58,7 +58,7 @@
 		"buttons": [
 			{
 				"text": "View Live",
-				"link": "http://project01-explore.herokuapp.com"
+				"link": "https://project01-explore.herokuapp.com"
 			},
 			{
 				"text": "Github",
@@ -68,18 +68,18 @@
 	},
 
 	{
-		"imageSrc": "./project-images/chatapp.png",
-		"name": "Chat App",
-		"description": "A chat app where users can create and join private or public rooms.",
-		"tags": ["Node.js", "Express.js", "Socket.io"],
+		"imageSrc": "./project-images/texttracker.png",
+		"name": "Text Tracker",
+		"description": "A video creation tool that animates input text. Featuring various options such as recording audio.",
+		"tags": ["Node.js", "Express.js", "p5.js", "ffmpeg", "WebAudioRecorder.js"],
 		"buttons": [
 			{
 				"text": "View Live",
-				"link": "http://project02-chatapp.herokuapp.com"
+				"link": "https://project02-texttracker.herokuapp.com"
 			},
 			{
 				"text": "Github",
-				"link": "https://github.com/khanghy2130/chatapp"
+				"link": "https://github.com/khanghy2130/text-tracker"
 			}
 		]
 	},
