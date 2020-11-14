@@ -1,5 +1,26 @@
 [	
 	{
+		"imageSrc": "./project-images/spreadpuzzle.png",
+		"name": "Spread Puzzle",
+		"description": "A browser game where PC users and mobile users can play together to solve procedurally generated puzzles.",
+		"tags": ["p5.js", "Typescript", "React", "SASS", "Node.js", "Express.js", "Socket.io"],
+		"buttons": [
+			{
+				"text": "View Live",
+				"link": "https://spreadpuzzle.herokuapp.com"
+			},
+			{
+				"text": "Github",
+				"link": "https://github.com/khanghy2130/spread_puzzle"
+			},
+			{
+				"text": "Watch Demo",
+				"link": "https://youtu.be/Q57w2F60kAI"
+			},
+		]
+	},
+
+	{
 		"imageSrc": "./project-images/frames.png",
 		"name": "Frames",
 		"description": "A space for GIFs collectors, where users can create account to collect GIFs and make friends with others to see more of their collections.",

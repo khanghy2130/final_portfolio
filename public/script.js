@@ -9,7 +9,7 @@ var colorThemes = {
 	lightTheme : {
 		"--primary-color" : "#dfdfdf",
 		"--secondary-color" : "#eaeaea",
-		"--tertiary-color" : "#ff4d21",
+		"--tertiary-color" : "#06088a",
 		"--quaternary-color" : "#444"
 	}
 };
