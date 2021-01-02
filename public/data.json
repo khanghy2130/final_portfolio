@@ -2,7 +2,7 @@
 	{
 		"imageSrc": "./project-images/spreadpuzzle.png",
 		"name": "Spread Puzzle",
-		"description": "A browser game where PC users and mobile users can play together to solve procedurally generated puzzles.",
+		"description": "A cross-platform browser game where players race to solve procedurally generated puzzles. Supports multiple languages.",
 		"tags": ["p5.js", "Typescript", "React", "SASS", "Node.js", "Express.js", "Socket.io"],
 		"buttons": [
 			{
