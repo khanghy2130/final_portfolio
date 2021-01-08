@@ -91,7 +91,7 @@
 	{
 		"imageSrc": "./project-images/texttracker.png",
 		"name": "Text Tracker",
-		"description": "A video creation tool that animates input text. Featuring various options such as recording audio.",
+		"description": "A video creation tool for a client. It makes compelling animation for the input text. Featuring various options such as recording audio.",
 		"tags": ["Node.js", "Express.js", "p5.js", "ffmpeg", "WebAudioRecorder.js"],
 		"buttons": [
 			{
