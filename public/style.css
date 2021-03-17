@@ -34,15 +34,15 @@ body, html {
 	transition-duration: 0.3s;
 
 	border: var(--tertiary-color) solid 0.2em;
-	color: var(--tertiary-color);
-	background: transparent;
+	color: var(--secondary-color);
+	background: var(--tertiary-color);
+	
 	padding: 0;
 	border-radius: 0.5em;
 }
 .btn-custom:hover {
-	border-color: transparent;
-	color: var(--secondary-color);
-	background: var(--tertiary-color);
+	color: var(--tertiary-color);
+	background: transparent;
 }
 
 /* MESSAGE STATUS */
