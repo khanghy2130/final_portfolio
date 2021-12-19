@@ -127,23 +127,6 @@
 	},
 
 	{
-		"imageSrc": "./project-images/rotatic.png",
-		"name": "Rotatic",
-		"description": "An unique puzzle game with in-game level editor. Featuring intriguing mechanism and smooth animations.",
-		"tags": ["p5.js"],
-		"buttons": [
-			{
-				"text": "View Live",
-				"link": "https://khanghy2130.github.io/Rotatic"
-			},
-			{
-				"text": "Github",
-				"link": "https://github.com/khanghy2130/Rotatic"
-			}
-		]
-	},
-
-	{
 		"imageSrc": "./project-images/letscode.png",
 		"name": "Let's build a game",
 		"description": "A let's-code video about building a game on browser with p5.js, a canvas library.",
